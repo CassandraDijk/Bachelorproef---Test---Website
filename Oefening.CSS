@@ -1,15 +1,10 @@
-
-
-
-
 body {
     margin: 0;
-    background-color: lightgray;
+    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
 
-
-/* WITTE CARD (alles zit hierin) */
+/* BOX */
 .box {
     width: 96%;
     margin: 20px auto;
@@ -23,19 +18,38 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 60px;
 }
 
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
 /* MENU */
-.menu {
+.menu,
+.menu2 {
     display: flex;
     gap: 25px;
 }
 
 .menu a {
+    color: #777;
     text-decoration: none;
+}
+
+.menu2 a {
     color: #333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.menu a:hover,
+.menu2 a:hover {
+    color: #000;
 }
 
 /* LOGO */
@@ -51,93 +65,61 @@ body {
     display: block;
 }
 
-/* TEKST */
+/* CONTENT */
 .content {
     padding: 40px 60px;
 }
 
-.content h1 { /*Titel van eerste*/
+.content h1 {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 20px;
     font-weight: normal;
-
+    margin: 40px 0 20px;
 }
 
-.content p {    /*tekst van eerste*/
-    margin-bottom: 20px;
+.content p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px;
     line-height: 1.6;
-    text-align: center;
 }
 
-.box2 {
-    width: 96%;
-    margin: 20px auto;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.box2 table {
+/* SERVICE IMAGE */
+.service {
     width: 100%;
-    border-collapse: collapse;
 }
 
-.box2 td {
-    width: 50%;
-    padding: 20px;
-    vertical-align: middle;
-}
-
-.box2 tr {
-    height: 250px; /* of groter indien nodig */
-}
-
-.box2 table img {
+.full-width-img {
     width: 100%;
-    height: 100%;          /* 🔥 belangrijkste wijziging */
+    height: 400px;
     object-fit: cover;
-    border-radius: 10px;
-}
-
-.box2 td:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-table img {
-    width: 90%;
-    max-width: 220px;   /* kleiner maken */
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px; /* ronde hoeken */
     display: block;
-    margin: 0 auto;
 }
 
-table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #2ecc71; /* groen */
-    color: white;
-    text-transform: uppercase;
+/* EXPERTS */
+.experts {
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 6px;
+    margin: 60px 0;
+}
+
+.expert-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.experts h1 {
+    text-transform: uppercase;
+}
+
+.expert-buttons .btn {
+    background: none;
+    color: black;
+    text-transform: none;
+    padding: 5px 0;
+    border-radius: 0;
     text-decoration: none;
-    font-weight: normal;
+    font-size: 14px;
 }
-
-body > h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: normal; /* ❗ haalt vet weg */
-}
-
-
